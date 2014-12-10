@@ -1,0 +1,6 @@
+{
+  "name": "PGBackups Archiver",
+  "description": "A barebones ruby app for archiving PGBackups",
+  "repository": "https://github.com/collectiveidea/pgbackups_archive_app",
+  "keywords": ["ruby", "pgbackups"]
+}

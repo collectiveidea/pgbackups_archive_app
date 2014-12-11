@@ -22,4 +22,9 @@ task :run_backup do
 
   # Run the archive command
   Heroku::Client::PgbackupsArchive.perform
+
+  if env["PGBACKUPS_DMS_URL"]
+    require "net/http"
+    Net::HTTP.get_response(env["PGBACKUPS_DMS_URL"])
+  end
 end

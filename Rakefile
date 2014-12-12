@@ -25,6 +25,6 @@ task :backup, :app_name, :oauth_token do |t, args|
 
   if env["PGBACKUPS_DMS_URL"]
     require "net/http"
-    Net::HTTP.get_response(env["PGBACKUPS_DMS_URL"])
+    Net::HTTP.get_response(URI(env["PGBACKUPS_DMS_URL"]))
   end
 end

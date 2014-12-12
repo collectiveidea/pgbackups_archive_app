@@ -10,14 +10,14 @@ A very simple app to archive PGBackups to S3.
 4. For each app you want to archive add a task to the scheduler
 
 ```bash
-rake "backup[APP_NAME, OAUTH_TOKEN]"
+rake "backup[APP_NAME,OAUTH_TOKEN]"
 ```
 
 An actual command for archiving "super-app" with OAuth token "e7dd6ad7-3c6a-411e-a2be-c9fe52ac7ed2"
 would look like this:
 
 ```bash
-rake "backup[super-app, e7dd6ad7-3c6a-411e-a2be-c9fe52ac7ed2]"
+rake "backup[super-app,e7dd6ad7-3c6a-411e-a2be-c9fe52ac7ed2]"
 ```
 
 ## Target app requirements

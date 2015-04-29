@@ -29,6 +29,13 @@ class PgBackupRunner
     ENV["PGBACKUPS_AWS_SECRET_ACCESS_KEY"] = app_env["PGBACKUPS_AWS_SECRET_ACCESS_KEY"]
     ENV["PGBACKUPS_REGION"]                = app_env["PGBACKUPS_REGION"]
     ENV["PGBACKUPS_BUCKET"]                = app_env["PGBACKUPS_BUCKET"]
+
+    if app_env["RAILS_ENV"]
+      # Setup cheater rails env for pg_backups gem
+      require File.expand_path("../fake_rails.rb", __FILE__)
+
+      Rails.env = app_env["RAILS_ENV"]
+    end
   end
 
   # Run the archive command

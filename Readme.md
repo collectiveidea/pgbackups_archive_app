@@ -76,7 +76,8 @@ I have contacted heroku about limiting the authorization to a specific app, but 
         "arn:aws:s3:::myapp-backups/*"
       ]
     }
-  ]
+  ],
+  "Version": "2012-10-17"
 }
 ```
 

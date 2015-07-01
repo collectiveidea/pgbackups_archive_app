@@ -22,7 +22,6 @@ rake "backup[super-app,e7dd6ad7-3c6a-411e-a2be-c9fe52ac7ed2]"
 
 ## Target app requirements
 
-* The target app must have the PG Backups addon active.
 * The following config variables need to be set on the target app
 
 Required:

@@ -55,7 +55,7 @@ class PgBackupRunner
   # Connect to the Heroku Platform API
   # and retrieve the app config
   def app_env
-    @app_env ||= PlatformAPI.connect_oauth(ENV["HEROKU_API_KEY"]).config_var.info(app_name)
+    @app_env ||= PlatformAPI.connect_oauth(ENV["HEROKU_API_KEY"]).config_var.info_for_app(app_name)
   end
 
   def app_name

@@ -81,3 +81,7 @@ I have contacted heroku about limiting the authorization to a specific app, but 
 ```
 
 This will give the user we just created complete access to only the bucket we just created.
+
+## Ensure you have scheduled backups
+
+[Set up your Heroku backups](https://devcenter.heroku.com/articles/heroku-postgres-backups#scheduling-backups) to run daily if they aren't already. If there aren't any backups, nothing will happen.
